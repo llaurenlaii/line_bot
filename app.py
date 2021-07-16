@@ -41,10 +41,12 @@ def callback():#返回的觸發時間
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):#處理訊息
     msg = event.message.text#使用者傳的訊息
-    s = '你是胖子嗎'
+    r = '聽不懂拉 先請我吃好吃的再說話'#預設要回覆的訊息
+    if msg == '嗨':
+        r = '想找我槓麻呢':
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=s))#回覆什麼訊息
+        TextSendMessage(text=r))#回覆什麼訊息
 
 
 if __name__ == "__main__":#加條件，確保如果該檔案是直接被執行，我們才執行以上內容，而不是直接跑程式碼
