@@ -42,7 +42,7 @@ def callback():#返回的觸發時間
 def handle_message(event):#處理訊息
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text))#使用者傳來的訊息回傳
+        TextSendMessage(text=event.message.text))#
 
 
 if __name__ == "__main__":#加條件，確保如果該檔案是直接被執行，我們才執行以上內容，而不是直接跑程式碼
